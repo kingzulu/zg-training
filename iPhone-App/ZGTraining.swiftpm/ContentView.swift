@@ -45,6 +45,9 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete { offsets in
+                    for index in offsets { store.planEintragEntfernen(plan.items[index]) }
+                }
             }
             Button {
                 store.neuerPlan()

@@ -82,6 +82,16 @@ final class TrainingStore: ObservableObject {
         daten.runs.removeAll { $0.id == run.id }
     }
 
+    func planEintragEntfernen(_ item: PlanItem) {
+        daten.plan?.items.removeAll { $0.id == item.id }
+        if daten.plan?.items.isEmpty == true { daten.plan = nil }
+    }
+
+    /// Setzt die App auf den Anfangszustand zurück.
+    func allesLoeschen() {
+        daten = Daten()
+    }
+
     private func save() {
         if let data = try? JSONEncoder().encode(daten) {
             try? data.write(to: Self.dateiURL, options: .atomic)

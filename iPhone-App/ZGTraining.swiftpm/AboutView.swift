@@ -32,7 +32,7 @@ struct AboutView: View {
                         .font(.largeTitle.bold())
                         .foregroundColor(.white)
 
-                    Text("ZG-Training macht aus jedem Drill eine klare Aufgabe mit messbarem Score und plant das nächste Training nach deiner Fehlertendenz. Ein ruhiger Stand, ein klarer Gedanke, und mit jedem Schlag ein Stück besser.")
+                    Text("ZG-Training macht aus jedem Drill eine klare Aufgabe mit messbarem Score und plant das nächste Training nach deiner Fehlertendenz. Mit jedem Schlag ein Stück besser.")
                         .font(.body)
                         .foregroundColor(.white.opacity(0.75))
 
