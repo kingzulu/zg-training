@@ -6,16 +6,15 @@ import Foundation
 
 /// Alle Schläger, die in einem Drill vorkommen können.
 enum Club: String, Codable, CaseIterable, Identifiable {
-    case driver, holz3, hybrid, eisen4, eisen5, eisen6, eisen7, eisen8, eisen9, pw, gw, sw, lw, putter
+    case driver, holz, hybrid, eisen5, eisen6, eisen7, eisen8, eisen9, pw, gw, sw, lw, putter
 
     var id: String { rawValue }
 
     var label: String {
         switch self {
         case .driver: return "Driver"
-        case .holz3: return "Holz 3"
+        case .holz: return "Holz"
         case .hybrid: return "Hybrid"
-        case .eisen4: return "Eisen 4"
         case .eisen5: return "Eisen 5"
         case .eisen6: return "Eisen 6"
         case .eisen7: return "Eisen 7"
