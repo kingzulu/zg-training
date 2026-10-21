@@ -234,6 +234,8 @@ enum Erschwerung: Hashable {
     case radius(faktor: Double)
     case distanz(plusMeter: Double)
     case schlaeger(Club)
+    /// Anderes Eisen mit passender Zieldistanz (Eisen-Leiter).
+    case eisen(Club, meter: Double)
     case puttDistanz(meter: Double)
     case puttBreak
 }

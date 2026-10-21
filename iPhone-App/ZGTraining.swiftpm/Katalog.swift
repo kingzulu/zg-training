@@ -16,20 +16,26 @@ enum Katalog {
         id: "dispersion-grid",
         name: "Dispersion-Grid",
         kategorie: .eisen,
-        beschreibung: "20 Bälle auf ein festes Ziel. Perfekt ± 5 m = 3 Punkte, Akzeptabel ± 10 m = 1 Punkt.",
-        steps: [Step(club: .eisen7, target: .fahne(meter: 150), baelle: 20, gruppe: .gruenAnspiel)],
+        beschreibung: "20 Bälle auf ein festes Ziel. Perfekt ± 5 m = 3 Punkte, Akzeptabel ± 10 m = 1 Punkt. Eisen-Leiter: Start mit Eisen 9, bei jedem Aufstieg ein Eisen länger.",
+        steps: [Step(club: .eisen9, target: .fahne(meter: 120), baelle: 20, gruppe: .gruenAnspiel)],
         scoring: .zonen([
             Zone(name: "Perfekt", radiusMeter: 5, punkte: 3),
             Zone(name: "Akzeptabel", radiusMeter: 10, punkte: 1),
         ]),
         regeln: [
             Rule(wenn: .punkteMindestens(45), dann: [.schwerer],
-                 grund: "Mindestens 45 Punkte: Der Drill wird schwerer."),
+                 grund: "Mindestens 45 Punkte: nächstes Mal ein Eisen länger."),
             Rule(wenn: .punkteUnter(35),
                  dann: [.leichter, .hinweis("Halbschwünge machen, Tee-Höhe prüfen und auf das Fehlerbild (Slice/Hook) achten.")],
-                 grund: "Unter 35 Punkten: ein Schritt zurück."),
+                 grund: "Unter 35 Punkten: nächstes Mal ein Eisen zurück."),
         ],
-        erschwerungen: [.radius(faktor: 0.7), .schlaeger(.eisen5)],
+        // Zieldistanzen sind Startwerte; bei Bedarf an die eigenen Längen anpassen.
+        erschwerungen: [
+            .eisen(.eisen8, meter: 135),
+            .eisen(.eisen7, meter: 150),
+            .eisen(.eisen6, meter: 160),
+            .eisen(.eisen5, meter: 170),
+        ],
         bereich: .gruenAnspiel
     )
 

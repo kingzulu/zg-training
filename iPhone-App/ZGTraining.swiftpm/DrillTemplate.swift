@@ -82,6 +82,11 @@ struct DrillTemplate: Identifiable {
             }
         case .schlaeger(let club):
             for index in steps.indices { steps[index].club = club }
+        case .eisen(let club, let meter):
+            for index in steps.indices {
+                steps[index].club = club
+                steps[index].target = .fahne(meter: meter)
+            }
         case .puttDistanz(let neu):
             for index in steps.indices {
                 if case .putt(_, let neigung) = steps[index].target {
