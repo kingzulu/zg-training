@@ -29,12 +29,12 @@ enum Katalog {
                  dann: [.leichter, .hinweis("Halbschwünge machen, Tee-Höhe prüfen und auf das Fehlerbild (Slice/Hook) achten.")],
                  grund: "Unter 35 Punkten: nächstes Mal ein Eisen zurück."),
         ],
-        // Zieldistanzen sind Startwerte; bei Bedarf an die eigenen Längen anpassen.
+        // 10-m-Schritte je Eisen, Start Eisen 9 auf 120 m.
         erschwerungen: [
-            .eisen(.eisen8, meter: 135),
-            .eisen(.eisen7, meter: 150),
-            .eisen(.eisen6, meter: 160),
-            .eisen(.eisen5, meter: 170),
+            .eisen(.eisen8, meter: 130),
+            .eisen(.eisen7, meter: 140),
+            .eisen(.eisen6, meter: 150),
+            .eisen(.eisen5, meter: 160),
         ],
         bereich: .gruenAnspiel
     )

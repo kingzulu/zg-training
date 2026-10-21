@@ -18,8 +18,8 @@ let package = Package(
             targets: ["AppModule"],
             bundleIdentifier: "de.kingzulu.zgtraining",
             teamIdentifier: "2XUJFFJ4X2",
-            displayVersion: "1.4",
-            bundleVersion: "5",
+            displayVersion: "1.5",
+            bundleVersion: "6",
             appIcon: .asset("AppIcon"),
             accentColor: .asset("AccentColor"),
             supportedDeviceFamilies: [
